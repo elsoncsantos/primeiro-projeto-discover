@@ -24,6 +24,7 @@
 }
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 /*body * é o seletor universal, no caso de fontes. Ele irá usar para todos os elementos a mesma fonte que estiver definida*/
 body * {
@@ -31,7 +32,8 @@ body * {
   color: var(--text-color);
 }
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /*height: 712px;*/
   /*border: 1px solid red;*/
   margin: 56px auto 0px;
@@ -129,4 +131,15 @@ footer {
   text-align: center;
   padding: 24px 0;
   font-size: 14px;
+}
+
+/*media queries*/
+@media (min-widht: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+ 
+  .light {
+  --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
